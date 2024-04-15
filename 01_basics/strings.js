@@ -30,3 +30,10 @@ const myName="My name is Anil"
 // console.log(name.replace('i','t')) =>it will replace i to t i.e it will give Antl
 // console.log(name.includes("n")) =>it check if n is their or not if yes then give true else false 
 // console.log(myName.split(" ")) =>it will split myName string based on space and gives values as an array i.e ["My", "name" ,"is","Anil"]
+
+
+
+const number=100
+const newNumber=new Number(100)
+console.log(typeof number)
+console.log(typeof newNumber)

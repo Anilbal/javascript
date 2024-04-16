@@ -2,6 +2,7 @@
 // Array object is the collection of different data types with a single variable name like myArr below  
 // JavaScript array-copy operations create shallow copies means it changes the original value if we make changes in copy array
 // Array is resizable means we can add more values or data like line no.9
+// Array can take any elements or datatypes like array itself ,object,string,number,boolean etc
 
 let myArr=[1,2,3,"anil",true]
 console.log(typeof myArr) //output will be object
@@ -34,3 +35,43 @@ console.log(myFirstArray.splice(1,3))
     makes  changes to  its original array and print output as [1,2,3]
 */
 console.log("B ", myFirstArray) //output will be [0,4,5]
+
+
+const firstArray=[0,2,4,6]
+const secArray=[1,3,5,7]
+
+// firstArray.push(secArray)
+// console.log(firstArray)
+// output will be [ 0, 2, 4, 6, [ 1, 3, 5, 7 ] ] ,it takes secArray as a single index
+
+// const thirdArray=firstArray.concat(secArray)
+// console.log(thirdArray)
+//output will be [ 0, 2, 4, 6,1, 3, 5, 7], it will add all values into single array 
+
+
+//we can add two array also by using spread operator
+const thirdArray=[...firstArray,...secArray]
+console.log(thirdArray)
+//output will be as concat values
+
+
+const lastArray=[1,2,3,[4,5],6,7,[3,5,6,[2,3]]]
+const flatArray=lastArray.flat(3) //flat method Returns a new array with all sub-array elements concatenated into it recursively up to the specified depth.
+console.log(flatArray)
+/*
+output will be [
+  1, 2, 3, 4, 5,
+  6, 7, 3, 5, 6,
+  2, 3
+]
+*/
+
+
+console.log(Array.isArray("Anil")) //check if that 'Anil ' is array or not if yes it says true else false
+console.log(Array.from("Anil")) //it will change my "ANil" into array type
+
+
+let array1=100
+let array2=200
+let array3=300
+console.log(Array.of(array1,array2,array3)) //it will convert my all number into array as [100,200,300]

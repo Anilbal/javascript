@@ -78,3 +78,23 @@ console.log(Object.keys(myObject)) //output will be ['1','2','3']
 console.log(Object.values(myObject)) //output will be ['aaa','bbb','ccc']
 console.log(Object.entries(myObject)) //it will change my every key and values into array
 console.log(myObject.hasOwnProperty('1'))  //it checks if any key is there in selected object or not
+
+
+
+const newObj={
+    name:"Anil",
+    age:23,
+    email:"anil@gmail.com"
+}
+
+const {email:isEmail}=newObj //destructring
+console.log(isEmail)
+
+
+//json =>it is basically an objects or objects
+
+// {
+//     "name":"Anil",
+//     "id:1",
+//     "age":23
+// }

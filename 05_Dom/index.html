@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Dom</title>
+    </head>
+    <body style="background-color: #252525; color: #fff;">
+        <div class="parent">
+            <div class="day">Sunday</div>
+            <div class="day">Monday</div>
+            <div class="day">Tuesday</div>
+            <div class="day">Wednesday</div>
+            <div class="day">THursday</div>
+        </div>
+    </body>
+    <script>
+        const parent=document.querySelector('.parent')
+        // console.log(parent)
+        // console.log(parent.children) =>it will give every children
+        // console.log(parent.children[1].innerHTML) =>it will index 1 html text i.e monday
+
+        // for(let i=0;i<parent.children.length;i++){
+        //     // console.log(parent.children[i].innerHTML)
+        // }
+
+        // console.log(parent.firstElementChild.innerHTML)
+        // console.log(parent.lastElementChild.innerHTML)
+
+        const dayOne=document.querySelector('.day')
+        // console.log(dayOne.innerHTML) =>it will give first element of dom
+        // console.log(dayOne.parentElement) =>it will give parent element or div 
+        // console.log(dayOne.nextElementSibling) =>it will give next sibling value i.e monday
+        console.log("nodes:",parent.childNodes)
+
+    </script>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #252525; color: #fff;">
+</body>
+<script>
+    const div=document.createElement('div')
+    console.log(div)
+    //here id and className is given by default
+    div.className="head"
+    div.id=Math.round(Math.random()*10+1)
+    div.setAttribute("title","main")
+    div.style.backgroundColor='green'
+    // div.innerText="This is js"
+    const addText=document.createTextNode("This is js")
+    div.appendChild(addText)
+    document.body.appendChild(div)
+</script>
+</html>

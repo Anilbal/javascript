@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class="language">
+        <li>Javasciprt</li>
+    </ul>
+</body>
+<script>
+    //Adding list element simply
+    // const list=document.querySelector('.language')
+    // // console.log(newLi)
+    // const newLi=document.createElement("li")
+    // newLi.innerHTML="Python"
+    // list.appendChild(newLi)
+    // console.log(list)
+
+    //Addning list by function
+    function name(lang){
+        const li=document.createElement('li')
+        li.innerHTML=lang
+        document.querySelector('.language').appendChild(li)
+    }
+    name("json")
+
+// optimization of above function
+    function addName(lang){
+        const li=document.createElement('li')
+        li.appendChild(document.createTextNode(lang))
+        document.querySelector('.language').appendChild(li)
+    }
+    addName('Ruby')
+
+    //edit
+    const second=document.querySelector('li:nth-child(2)')
+    // second.innerHTML='Java'
+    const list=document.createElement('li')
+    list.textContent="java"
+    second.replaceWith(list)
+
+    //another edit
+    const first=document.querySelector('li:first-child')
+    first.outerHTML="<li>TYPESCRIPT</li>"
+
+    //remove li
+    const last=document.querySelector('li:last-child')
+    last.remove()
+</script>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .event{
+            font-size: 40px;
+        }
+        .event p{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body style="background-color: #414141; color:#fff;">
+    <h2>This is event basics</h2>
+    <ul id="main">
+        <li class="event"><p id="one">First</p></li>
+        <li class="event"><p id="two">Second</p></li>
+        <li class="event"><p id="three">Third</p></li>
+        <li class="event"><p id="four">Fourth</p></li>
+        <li class="event"><p id="five">Fifth</p></li>
+    </ul>
+</body>
+<script>
+
+    //event propogation
+    // document.getElementById("main").addEventListener('click',function(e){
+    //     alert('Ul clicked')
+    // },false)
+
+    // document.getElementById("two").addEventListener('click',function(e){
+    //     alert('Second clicked')
+    //     e.stopPropagation()// it avoid from bubbling
+    // },false)
+
+    // document.getElementById("five").addEventListener('click',function(e){
+    //     e.preventDefault()
+    //     console.log('Second clicked')
+    //     e.stopPropagation()// it avoid from bubbling
+    // },false)
+
+
+    //removing list p
+    document.querySelector('#main').addEventListener('click',function(e){
+        console.log(e.target.tagName)
+        if(e.target.tagName==="P"){
+            let removeIt=e.target.parentNode
+            removeIt.remove()
+            //another method of remove
+            // removeIt.parentNode.removeChild(removeIt)
+        }
+    },false)
+</script>
+</html>

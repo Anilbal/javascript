@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set time out</title>
+</head>
+<body>
+    <h1>My javascript session</h1>
+    <button id="btn">Stop</button>
+</body>
+<script>
+    const changeName=function(){
+        document.querySelector('h1').innerHTML="I am learning my sessions"
+    }
+    const change=setTimeout(changeName,2000)
+    document.querySelector('#btn').addEventListener('click',()=>{
+        clearTimeout(change)
+    })
+</script>
+</html>

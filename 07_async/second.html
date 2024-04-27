@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Inteval</title>
+</head>
+<body>
+    <h2>This is js</h2>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    let change;
+    const startBtn=document.querySelector("#start").addEventListener("click",()=>{
+        change=setInterval(()=>{
+            console.log(Date.now())
+        },1000)
+    })
+    const stopBtn=document.querySelector("#stop").addEventListener('click',()=>{
+        clearInterval(change)
+    })
+</script>
+</html>

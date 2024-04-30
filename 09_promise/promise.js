@@ -103,7 +103,7 @@ newPromiseFIve()
 //fetching data from api using async and try catch
 async function newPromiseData(){
     try{
-        const response=await fetch('https://jsonplaceholder.typicode.com/users')
+        const response=await fetch('https://jsonplaceholder.typicode.com/users') 
         const data=await response.json()
         console.log(data)
     }catch(error){
@@ -116,6 +116,8 @@ newPromiseData()
 
 
 ///fetching api from using promise
+//fetch is a function that return promise in js
+
 fetch('https://jsonplaceholder.typicode.com/users')
 .then((res)=>{
     return res.json()
